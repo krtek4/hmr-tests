@@ -8,5 +8,12 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
+
+if (environment.hmr) {
+  import('@ngxs/hmr-plugin').then(plugin => {
+    plugin.hmr(module, bootstrap).catch((err: Error) => console.error(err));
+  });
+} else {
+  bootstrap().catch((err: Error) => console.log(err));
+}
