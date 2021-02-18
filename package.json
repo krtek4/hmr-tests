@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --hmr"
+    "start": "ng serve"
   },
   "private": true,
   "dependencies": {
@@ -14,8 +14,9 @@
     "@angular/forms": "11.2.1",
     "@angular/platform-browser": "11.2.1",
     "@angular/platform-browser-dynamic": "11.2.1",
-    "@ngxs/logger-plugin": "^3.7.1",
-    "@ngxs/store": "^3.7.1",
+    "@ngxs/hmr-plugin": "^3.7.1",
+    "@ngxs/logger-plugin": "3.7.1",
+    "@ngxs/store": "3.7.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
